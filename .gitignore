@@ -6,4 +6,6 @@
 *.pem
 *.swp
 
+quick-tabs/.extension-reloader
+
 quick-tabs.zip
