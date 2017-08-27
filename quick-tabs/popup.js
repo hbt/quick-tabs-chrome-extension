@@ -297,25 +297,32 @@ $(document).ready(function() {
   });
 
   $(document).bind('keydown.return', function() {
-    if (!isFocusSet()) {
+    if(!isFocusSet())
+    {
       focusFirst();
     }
 
-    if (isFocusSet()) {
+    if(isFocusSet())
+    {
       entryWithFocus().trigger("click");
-    } else {
-      var inputText = $("#searchbox");
-      var url = searchStringAsUrl(inputText.val());
-
-      log("no tab selected, " + url);
-      if (/^(http|https|ftp):\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?,'/\\\+&amp;%$#=~])*$/.exec(url)) {
-        chrome.tabs.create({url: url});
-      } else {
-        //url = "http://www.google.com/search?q=" + encodeURI($("input[type=text]").val());
-        url = bg.getSearchString().replace(/%s/g, encodeURI(inputText.val()));
-        chrome.tabs.create({url: url});
-        closeWindow();
-      }
+    }
+    else
+    {
+      //var inputText = $("#searchbox");
+      //var url = searchStringAsUrl(inputText.val());
+      //
+      //log("no tab selected, " + url);
+      //if(/^(http|https|ftp):\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?,'/\\\+&amp;%$#=~])*$/.exec(url))
+      //{
+      //  chrome.tabs.create({url: url});
+      //}
+      //else
+      //{
+      //  //url = "http://www.google.com/search?q=" + encodeURI($("input[type=text]").val());
+      //  url = bg.getSearchString().replace(/%s/g, encodeURI(inputText.val()));
+      //  chrome.tabs.create({url: url});
+      //  closeWindow();
+      //}
     }
 
     return false;
