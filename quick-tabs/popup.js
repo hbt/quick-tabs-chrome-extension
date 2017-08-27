@@ -296,6 +296,15 @@ $(document).ready(function() {
     return false;
   });
 
+  $(document).bind('keydown.esc', function()
+  {
+
+    chrome.runtime.sendMessage({action: 'restoreFocusHack'}, function(response)
+    {
+    });
+    
+  });
+
   $(document).bind('keydown.return', function() {
     if(!isFocusSet())
     {

@@ -1,3 +1,9 @@
+# Fork differences
+
+- fixes bug where pressing `Enter` creates another tab with the partially written text
+- fixes bug where pressing `Escape` does not restore focus to document body
+
+
 # INTRODUCTION
 
 Quick Tabs is a tab management browser extension for the Google Chrome web browser based on the "Recent Files" quick selector built into the excellent IntelliJ IDEA by Jetbrains.
