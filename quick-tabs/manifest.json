@@ -15,7 +15,7 @@
   },
   "minimum_chrome_version": "25",
   "manifest_version": 2,
-  "name": "Quick Tabs",
+  "name": "Quick Tabs Fuzzy Finder",
   "options_page": "options.html",
   "permissions": [ "tabs", "bookmarks", "history" ],
   "update_url": "http://clients2.google.com/service/update2/crx",
